@@ -3,7 +3,7 @@ layout: default
 title: Inici
 ---
 
-# Cròniques de la Família
+# Cròniques de la Família v2
 
 Benvinguts! Aquesta web recull les cròniques de la família **organitzades per períodes** (cada període correspon a la vida d’un patriarca o matriarca) i per **històries** (fets destacats).
 
