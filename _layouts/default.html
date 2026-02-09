@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'ca' }}">
+  <head>
+    {% include head.html %}
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="site">
+        <h2 style="margin:0"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h2>
+        <p class="muted" style="margin:.25rem 0 0">{{ site.description }}</p>
+        <nav style="margin: .75rem 0 1rem">
+          <a href="{{ '/' | relative_url }}">Inici</a>
+          <a href="{{ '/timeline' | relative_url }}">Línia temporal</a>
+        </nav>
+      </header>
+
+      <main>
+        {{ content }}
+      </main>
+
+      <footer class="muted" style="margin-top:2rem; padding-top:1rem; border-top:1px solid #d0d7de;">
+        <small>Fet amb Jekyll · {{ 'now' | date: "%Y" }}</small>
+      </footer>
+    </div>
+  </body>
+</html>

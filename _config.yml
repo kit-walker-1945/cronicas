@@ -1,18 +1,35 @@
-lsi: false
-safe: true
-source: [your repo's top level directory]
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
-  
+title: "Cròniques de la Família"
+description: "Una web per publicar les cròniques per períodes (patriarques) i les històries associades."
+url: "" # opcional: https://usuari.github.io
+baseurl: "" # opcional: /repositori
+lang: ca
+timezone: Europe/Madrid
+
+theme: minima
+
+# Col·leccions
 collections:
-  periode_joan:
+  periodes:
     output: true
-  periode_anton:
+    permalink: /periodes/:name/
+  histories:
     output: true
-  periode_maria:
-    output: true
+    permalink: /histories/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "periodes"
+    values:
+      layout: periode
+  - scope:
+      path: ""
+      type: "histories"
+    values:
+      layout: historia
+
+# Plugins compatibles amb GitHub Pages
+plugins:
+  - jekyll-feed
+
+markdown: kramdown

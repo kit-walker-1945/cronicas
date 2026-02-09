@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<article class="historia">
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p class="muted">
+      {{ page.data | date: "%d/%m/%Y" }}
+      · Període: <a href="{{ '/periodes/' | relative_url }}{{ page.periode }}/">{{ page.periode }}</a>
+      {% if page.lloc %}· {{ page.lloc }}{% endif %}
+    </p>
+    {% if page.etiquetes %}
+      <p class="tags">
+        {% for t in page.etiquetes %}<span class="tag">{{ t }}</span>{% endfor %}
+      </p>
+    {% endif %}
+  </header>
+
+  <section class="content">
+    {{ content }}
+  </section>
+
+  <footer>
+    <hr/>
+    <p class="muted">⬅️ <a href="{{ '/timeline' | relative_url }}">Tornar a la línia temporal</a></p>
+  </footer>
+</article>
